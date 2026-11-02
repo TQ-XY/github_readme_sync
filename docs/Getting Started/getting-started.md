@@ -2,33 +2,25 @@
 title: Welcome to sync_documentation
 hidden: false
 ---
-## Become an Integration Partner
-
-Become a partner to gain access to our APIs. You can then begin developing your Commerce integration.
-
-<HTMLBlock>{`
-<a href="https://www.deliverect.com/en/become-a-partner" target="_blank" class="doc-button">▶ Sign up</a>
-`}</HTMLBlock>
-
 ***
 
-## Build a Commerce Integration
+## Overview
 
-Below are the general steps to integrating our Commerce API
+Below is a high-level overview of the key Commerce API interactions, with a brief description of the role they play in supporting the complete ordering journey from store discovery through to POS order injection;
 
 <HTMLBlock>{`
 <div class="step-list">
   <div class="step-list-item">
     <div class="step-list-marker step-list-marker--green">1</div>
     <div class="step-list-content">
-      <p class="step-list-title">Get an Access Token — <a href="https://developers.deliverect.com/reference/access-token" target="_blank">Get Access Token</a></p>
+      <p class="step-list-title">Authenticate — <a href="https://developers.deliverect.com/reference/access-token">Get Access Token</a></p>
       <p class="step-list-desc">Retrieve a token granting you access to our endpoints.</p>
     </div>
   </div>
   <div class="step-list-item">
     <div class="step-list-marker step-list-marker--green">2</div>
     <div class="step-list-content">
-      <p class="step-list-title">Retrieve Linked Customer Accounts — <a href="https://developers.deliverect.com/v1.1-restaurants/reference/get-linked-accounts" target="_blank">Get Linked Accounts</a></p>
+      <p class="step-list-title">Retrieve Linked Customer Accounts — <a href="https://developers.deliverect.com/v1.1-restaurants/reference/get-linked-accounts">Get Linked Accounts</a></p>
       <p class="step-list-desc">Retrieve the customer accounts linked to your partner account.</p>
     </div>
   </div>
@@ -91,6 +83,26 @@ Below are the general steps to integrating our Commerce API
   </div>
 </div>
 `}</HTMLBlock>
+
+<Cards>
+  <Card title="Flow Diagram" href="https://developers.deliverect.com/page/commerce-api-flow-diagram" icon="fad fa-diagram-project">
+    Visualise the complete Commerce order flow, from retrieving store details to processing orders in checkout
+  </Card>
+
+  <Card title="Guides" href="https://developers.deliverect.com/v3.0-ordering-experience/docs/commerce-guide-overview" icon="fad fa-book">
+    Step-by-step guidance for integrating your ordering platform with our Commerce API
+  </Card>
+
+  <Card title="Partners" href="https://www.deliverect.com/integrations/loyalty" icon="fad fa-handshake">
+    Explore our network of **dispatch**, **loyalty** and **payment** partners to enhance the ordering experience
+  </Card>
+</Cards>
+
+<br />
+
+<br />
+
+<br />
 
 <br />
 
