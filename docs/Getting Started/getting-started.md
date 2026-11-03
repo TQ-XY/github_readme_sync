@@ -1,6 +1,6 @@
 ---
 title: 'Commerce API '
-excerpt: An overview
+excerpt: The  overview
 hidden: false
 ---
 
