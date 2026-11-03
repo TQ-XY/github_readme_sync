@@ -1,5 +1,6 @@
 ---
 title: 'Channel API '
+hidden: false
 privacy:
   view: public
 ---
