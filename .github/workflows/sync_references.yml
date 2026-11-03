@@ -34,7 +34,7 @@ jobs:
           for f in "${files[@]}"; do
             slug=$(basename "$f")
             echo "Uploading $f (slug: $slug)"
-            npx --yes rdme@10 openapi upload "$f" \
+            npx --yes rdme@11 openapi upload "$f" \
               --key="$README_API_KEY" \
               --branch=v1.0 \
               --slug="$slug" \
