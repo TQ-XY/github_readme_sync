@@ -1,7 +1,9 @@
 ---
 title: 'Commerce API '
-excerpt: The  overview
-hidden: false
+content:
+  excerpt: The  overview
+privacy:
+  view: public
 ---
 
 
