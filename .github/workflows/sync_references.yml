@@ -1,11 +1,10 @@
-name: readme_sync
+name: Sync OpenAPI definition to ReadMe
 
+# Run workflow for every push to the `main` branch
 on:
   push:
     branches:
       - v1.0
-    paths-ignore:
-      - 'docs/**'
 
 jobs:
   sync:
@@ -14,22 +13,10 @@ jobs:
       - name: Checkout this repo
         uses: actions/checkout@v4
 
-      - name: Sync API reference (all JSON in ./reference)
-        env:
-          README_API_KEY: ${{ secrets.README_API_KEY }}
-        run: |
-          shopt -s nullglob
-          files=(reference/*.json)
-          if [ ${#files[@]} -eq 0 ]; then
-            echo "No JSON files found in ./reference"
-            exit 0
-          fi
-          for f in "${files[@]}"; do
-            slug=$(basename "$f")
-            echo "Uploading $f (slug: $slug)"
-            npx --yes rdme@10 openapi upload "$f" \
-              --key="$README_API_KEY" \
-              --branch=v1.0 \
-              --slug="$slug" \
-              --confirm-overwrite
-          done
+      # Run GitHub Action to sync OpenAPI file at ./path-to-file.json
+      - name: GitHub Action
+        # We recommend specifying a fixed version, i.e. @v10
+        # Docs: https://docs.github.com/actions/using-workflows/workflow-syntax-for-github-actions#example-using-versioned-actions
+        uses: readmeio/rdme@v10
+        with:
+          rdme: openapi upload ./commerce.json --key=${{ secrets.README_API_KEY }} --slug=openapi/commerce.json
